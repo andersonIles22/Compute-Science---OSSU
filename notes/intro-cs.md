@@ -106,4 +106,25 @@
 - La representación de los puntos flotantes no dependen de la implementación del lenguaje de programación, sino del hardware informático.
 - Todo se representa como secuencia de bits (0 o 1). Dado que es facil de implementar en la construcción de hardware, debido a sus estados ( 1 y 0).
 
+## Lecture 6 - Floats and Approximation Methods
+**Estado:** ✅ Completada
+**Fecha:** 28/04/2026
+
+### Conceptos clave
+- while and for loops
+- float and binary numbers
+
+### Finger Exercises
+- [✓] FE 3.1 - extract strings when the index is even. 
+
+
+### Aprendizajes personales
+- La conversión de numeros enteros de base 10 a binario se aplica un algoritmo basico que mendiate la división del cociente y la obtención del residuo se puede obtener el numero entero en binario.
+- Los numeros fraccionarios al ser irracionales, con numeros infinitos en la parte decimal, se deben establecer limites para no superar la capacidad de almacenamiento. Este limite afecta a la precisión del valor real.
+- La conversión de numeros fraccionarios a binarios es un poco complicada debido a que se debe tener en cuenta la limitación del almacenamiento y procesamiento del hardware. Para esto surge la estandarización IEEE 754 que dicta ciertos parametros para que estos numeros puedan ser almacenados en 32 y 64 bits.
+- En el caso de 32 bits, toma en cuenta 1 bit para el signo, 8 bits para exponente y 23 bits para la precisión.
+- Los puntos flotantes existen para optimizar el almacenamiento del numero sin perder presición total. 
+- La estandarización establece que los puntos flotantes sean la representación de la conversión de numero fraccionario a binario. Como: 84,125=1.010100001*2^6. Donde el primer valor siempre es 1, el valor despues del punto decimal es la precisión real del número, y 6 es el exponente que establece si se movio a la derecha o a la izquierda hasta el primer 1 a la izquierda.
+- Epsilon, un numero que se puede establecer dependiendo del margen de error que se desea obtener el calculo de la raíz de un valor. Con la finalidad de obtener un numero suficientemente bueno y proximo al valor real. Esto evita un procesamiento infinito y usar almacenamiento innecesario.
+
 
