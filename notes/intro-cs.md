@@ -93,8 +93,8 @@
 - float and binary numbers
 
 ### Finger Exercises
-- [✓] FE 3.1 - for loop with range()
-- [✓] FE 3.2 - funtion abs() to keep the integer positive
+- [✓] FE 4.1 - for loop with range()
+- [✓] FE 4s.2 - funtion abs() to keep the integer positive
 
 
 ### Aprendizajes personales
@@ -106,7 +106,7 @@
 - La representación de los puntos flotantes no dependen de la implementación del lenguaje de programación, sino del hardware informático.
 - Todo se representa como secuencia de bits (0 o 1). Dado que es facil de implementar en la construcción de hardware, debido a sus estados ( 1 y 0).
 
-## Lecture 6 - Floats and Approximation Methods
+## Lecture 5 - Floats and Approximation Methods
 **Estado:** ✅ Completada
 **Fecha:** 28/04/2026
 
@@ -115,7 +115,7 @@
 - float and binary numbers
 
 ### Finger Exercises
-- [✓] FE 3.1 - extract strings when the index is even. 
+- [✓] FE 5.1 - extract strings when the index is even. 
 
 
 ### Aprendizajes personales
@@ -127,4 +127,24 @@
 - La estandarización establece que los puntos flotantes sean la representación de la conversión de numero fraccionario a binario. Como: 84,125=1.010100001*2^6. Donde el primer valor siempre es 1, el valor despues del punto decimal es la precisión real del número, y 6 es el exponente que establece si se movio a la derecha o a la izquierda hasta el primer 1 a la izquierda.
 - Epsilon, un numero que se puede establecer dependiendo del margen de error que se desea obtener el calculo de la raíz de un valor. Con la finalidad de obtener un numero suficientemente bueno y proximo al valor real. Esto evita un procesamiento infinito y usar almacenamiento innecesario.
 
+## Lecture 6 - Bisection Search
+**Estado:** ✅ Completada
+**Fecha:** 28/04/2026
+
+### Conceptos clave
+- while
+- int and float numbers
+- math.floor
+
+### Finger Exercises
+- [✓] FE 5.1 - write a piece of code to find N between 0 and 1000, and return the attemps and the number.
+- [✓] FE 5.2 - Use bisection search
+
+
+### Aprendizajes personales
+- Evitar el tratar de buscar la respuesta exactaa todos los problemas, debido a que solo se puede encontrar un valor con cierto marge de error lo suficientemente bueno.
+- La busqueda binaria es mas eficiente en cuando a la implementación de ciertos algoritmos para encontrar la raíz de un numero de manera aproximada.
+- La busqueda binaria se basa en tomar un punto medio y preguntar si ese valor es menor o mayor al valor que se desea encontrar, y dependiendo de la respuesta descartar valores que no cumplen con la condición establecida. Para eso se debe utilizar ciclos que permitan iterar hasta encontrar el valor deseado.
+- El implementar la busqueda binaria para resolver problemas con dos endpoints, cuando los valores estan ordenados si o si, y cuando existe fedback sobre las predicciones (muy alto, muy bajo, correcto, mal, etc.)
+- La implemantación de metodos no es al azar, es debido a que escalan de forma logaritmica y no exponencial, esto permite ahorrar tiempo y recursos. Y ademas son eficientes aun cuando los valores son gigantes.
 
