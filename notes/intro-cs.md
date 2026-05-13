@@ -76,7 +76,7 @@
 - [✓] FE 3.2 - For loop con range
 
 ### Recitation Exercises
-- [x] Rec 3.1 - 4 ejercios resueltos (commit: `feat: rec3 - 4 exercises (string manipulation and loop)`)
+- [✓] Rec 3.1 - 4 ejercios resueltos (commit: `feat: rec3 - 4 exercises (string manipulation and loop)`)
 
 ### Aprendizajes personales
 - En JS uso while/for igual, pero Python range() es más limpio
@@ -147,4 +147,30 @@
 - La busqueda binaria se basa en tomar un punto medio y preguntar si ese valor es menor o mayor al valor que se desea encontrar, y dependiendo de la respuesta descartar valores que no cumplen con la condición establecida. Para eso se debe utilizar ciclos que permitan iterar hasta encontrar el valor deseado.
 - El implementar la busqueda binaria para resolver problemas con dos endpoints, cuando los valores estan ordenados si o si, y cuando existe fedback sobre las predicciones (muy alto, muy bajo, correcto, mal, etc.)
 - La implemantación de metodos no es al azar, es debido a que escalan de forma logaritmica y no exponencial, esto permite ahorrar tiempo y recursos. Y ademas son eficientes aun cuando los valores son gigantes.
+
+## Lecture 7 - Functions: decomposition, abstraction
+**Estado:** ✅ Completada
+**Fecha:** 12/05/2026
+
+### Conceptos clave
+- functions
+- loops
+- indentation
+
+### Finger Exercises
+- [✓] FE 5.1 - write the instructions to eval quadratic
+- [✓] FE 5.2 - write the instructions to get the sum of two evaluation of quadractics
+
+### Recitation Exercises
+- [✓] Rec 7.1 - 3 de 4 ejercios resueltos (commit: `feat: rec7 - 3 exercises (function and algorithms of approximation)`)
+
+### Aprendizajes personales
+- Las funciones permite abstracción al establecer detalles que son las instrucciones de lo que la función hace y mediante la interfaz planteada puede ser utilizada en varias partes del codigo. 
+- El establecer funciones permite la reutilización de codigo, permite mostrar al usuario solo que hace la función, más no como lo hace. 
+- Las funciones retornan un resultado mediante los parámetros de entrada, aunque pueden no tener parametros. Todo esto mientras oculta la información detallada de la función al usuario. 
+- Se puede establecer documentación a las funciones, esta documentación es como un contrato que dicta que tipos de valores de entradas puede recibir y que se espera como resultado al utilzar la función.
+- Las funciones son objetos, al ser objetos ocupan espacio en memoria. Sin embargo estas funciones son utiles mientras son invocados o llamados, caso contrario solo ocupan espacio.
+- Estas funciones una vez establecidos puede ser invocados desde cualquier parte del codigo y cuantas veces sean necesarias.
+- El almacenar funciones en variables, permite almacenar lo que retorna la función más no en si lo que es la función. 
+
 
