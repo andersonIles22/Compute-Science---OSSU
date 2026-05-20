@@ -137,8 +137,8 @@
 - math.floor
 
 ### Finger Exercises
-- [✓] FE 5.1 - write a piece of code to find N between 0 and 1000, and return the attemps and the number.
-- [✓] FE 5.2 - Use bisection search
+- [✓] FE 6.1 - write a piece of code to find N between 0 and 1000, and return the attemps and the number.
+- [✓] FE 6.2 - Use bisection search
 
 
 ### Aprendizajes personales
@@ -158,8 +158,8 @@
 - indentation
 
 ### Finger Exercises
-- [✓] FE 5.1 - write the instructions to eval quadratic
-- [✓] FE 5.2 - write the instructions to get the sum of two evaluation of quadractics
+- [✓] FE 7.1 - write the instructions to eval quadratic
+- [✓] FE 7.2 - write the instructions to get the sum of two evaluation of quadractics
 
 ### Recitation Exercises
 - [✓] Rec 7.1 - 3 de 4 ejercios resueltos (commit: `feat: rec7 - 3 exercises (function and algorithms of approximation)`)
@@ -173,4 +173,25 @@
 - Estas funciones una vez establecidos puede ser invocados desde cualquier parte del codigo y cuantas veces sean necesarias.
 - El almacenar funciones en variables, permite almacenar lo que retorna la función más no en si lo que es la función. 
 
+## Lecture 8 - Functions: environment, scope, function as object
+**Estado:** ✅ Completada
+**Fecha:** 19/05/2026
 
+### Conceptos clave
+- functions
+- in
+- loops
+
+### Finger Exercises
+- [✓] FE 8.1 - write a function that eval if str1 has the same characters that str2.
+
+
+### Aprendizajes personales
+- El uso de funciones en la mayoría de los casos retorna un valor. Este valor puede ser almacenado en una variable o puedo ser presentado en consola mediante la función print(). 
+- return es esclusivo de las funciones y son establecidas para retornar un valor por cada llamado de la función.
+- Print() presenta en consola el resultado de las instrucciones de una función, pero este no puede ser almacenado. Mientrás que return retorna un valor que puede ser almacenado y utilizado en otras partes de codigo. 
+- Si no se establece un valor a retornar de una función, al intentar visualizar el resultado será el valor None.
+- Al establecer y llamar a una función se establece un entorno muy aparte del entorno global que tien python. El entorno de la función se puede declarar variables, realizar operaciones, condicionales, etc. Al ser diferentes entornos, la unica manera de que los dos entornos se intervenga es mendiante usar los parametros como entrada de datos externos o cuando se retorna el resultado del llamado de la función.
+- El scope de la función se limita solo a la función, es decir que si establece instrucciones o variables dentro del entorno de la función, esta solo es valida para este entorno. 
+- Las funciones tambien son objetos como: los strings, enteros, flotantes, etc. Son objetos de primera clase, es decir que pueden ser utilizadas sin restricciones, por lo que pueden ser pasadas como parametros de otra función  sin necesidad de agregar los parentesis para evitar su ejecución inmediata, y ser tratadas como cualquier otro dato.
+- Las funciones pueden retornar otras funciones.
