@@ -106,6 +106,7 @@
 - La representación de los puntos flotantes no dependen de la implementación del lenguaje de programación, sino del hardware informático.
 - Todo se representa como secuencia de bits (0 o 1). Dado que es facil de implementar en la construcción de hardware, debido a sus estados ( 1 y 0).
 
+---
 ## Lecture 5 - Floats and Approximation Methods
 **Estado:** ✅ Completada
 **Fecha:** 28/04/2026
@@ -127,6 +128,7 @@
 - La estandarización establece que los puntos flotantes sean la representación de la conversión de numero fraccionario a binario. Como: 84,125=1.010100001*2^6. Donde el primer valor siempre es 1, el valor despues del punto decimal es la precisión real del número, y 6 es el exponente que establece si se movio a la derecha o a la izquierda hasta el primer 1 a la izquierda.
 - Epsilon, un numero que se puede establecer dependiendo del margen de error que se desea obtener el calculo de la raíz de un valor. Con la finalidad de obtener un numero suficientemente bueno y proximo al valor real. Esto evita un procesamiento infinito y usar almacenamiento innecesario.
 
+---
 ## Lecture 6 - Bisection Search
 **Estado:** ✅ Completada
 **Fecha:** 28/04/2026
@@ -148,6 +150,7 @@
 - El implementar la busqueda binaria para resolver problemas con dos endpoints, cuando los valores estan ordenados si o si, y cuando existe fedback sobre las predicciones (muy alto, muy bajo, correcto, mal, etc.)
 - La implemantación de metodos no es al azar, es debido a que escalan de forma logaritmica y no exponencial, esto permite ahorrar tiempo y recursos. Y ademas son eficientes aun cuando los valores son gigantes.
 
+---
 ## Lecture 7 - Functions: decomposition, abstraction
 **Estado:** ✅ Completada
 **Fecha:** 12/05/2026
@@ -173,6 +176,7 @@
 - Estas funciones una vez establecidos puede ser invocados desde cualquier parte del codigo y cuantas veces sean necesarias.
 - El almacenar funciones en variables, permite almacenar lo que retorna la función más no en si lo que es la función. 
 
+---
 ## Lecture 8 - Functions: environment, scope, function as object
 **Estado:** ✅ Completada
 **Fecha:** 19/05/2026
@@ -187,11 +191,36 @@
 
 
 ### Aprendizajes personales
-- El uso de funciones en la mayoría de los casos retorna un valor. Este valor puede ser almacenado en una variable o puedo ser presentado en consola mediante la función print(). 
+- El uso de funciones en la mayoría de los casos retorna un valor. Este valor puede ser almacenado en una variable o puede ser presentado en consola mediante la función print(). 
 - return es esclusivo de las funciones y son establecidas para retornar un valor por cada llamado de la función.
 - Print() presenta en consola el resultado de las instrucciones de una función, pero este no puede ser almacenado. Mientrás que return retorna un valor que puede ser almacenado y utilizado en otras partes de codigo. 
 - Si no se establece un valor a retornar de una función, al intentar visualizar el resultado será el valor None.
-- Al establecer y llamar a una función se establece un entorno muy aparte del entorno global que tien python. El entorno de la función se puede declarar variables, realizar operaciones, condicionales, etc. Al ser diferentes entornos, la unica manera de que los dos entornos se intervenga es mendiante usar los parametros como entrada de datos externos o cuando se retorna el resultado del llamado de la función.
+- Al establecer y llamar a una función se establece un entorno muy aparte del entorno global que tiene python. En el entorno de la función se puede declarar variables, realizar operaciones, condicionales, etc. Al ser diferentes entornos, la unica manera de que los dos entornos se intervenga es mendiante el uso de parametros como entrada de datos externos o cuando se retorna el resultado del llamado de la función.
 - El scope de la función se limita solo a la función, es decir que si establece instrucciones o variables dentro del entorno de la función, esta solo es valida para este entorno. 
 - Las funciones tambien son objetos como: los strings, enteros, flotantes, etc. Son objetos de primera clase, es decir que pueden ser utilizadas sin restricciones, por lo que pueden ser pasadas como parametros de otra función  sin necesidad de agregar los parentesis para evitar su ejecución inmediata, y ser tratadas como cualquier otro dato.
 - Las funciones pueden retornar otras funciones.
+
+---
+## Lecture 9 - Functions: Lambda, tuples and lists
+**Estado:**  Incompleta
+**Fecha:** -------
+
+### Conceptos clave
+- functions
+- tuples
+- lists
+
+### Finger Exercises
+- [✓] FE 9.1 - write a function that receives two tuples as arguments, and return a tuple of 2 elements, the first is the length of one of the tuples, and the second is the sum of the pairwise products of tA and tB.
+
+### Problem Set 1
+**Estado:** Incompleto
+**Problemas:** 1/2 completados
+#### Parte A - Set helpers functions
+- Objetivo: Establecer funciones que permirá complementar el funcionamiento del juego hangman
+- Commit: `feat: ps3a - completed has_player_won, get_word_progress and get_available_letters functions`
+#### Parte B - Finish Hangman Game
+- Objetivo: Finalizar el juego de manera que al introducir entradas interactue de manera dinamica con las opciones elegidas por el usuario
+- Commit: (Pendiente)
+
+---
