@@ -137,9 +137,67 @@ def hangman(secret_word, with_help):
 
     Follows the other limitations detailed in the problem write-up.
     """
-    # FILL IN YOUR CODE HERE AND DELETE "pass"
-    pass
+    allowed_characters=string.ascii_lowercase
+    consonants="bcdfghjklmnpqrstvwxyz"
+    vowels="aeiou"
+    points=10
 
+
+
+    welcome_message=f"\t\tHello welcome to the hangman game, can you win this game?"
+    description=f"\tThe secret word have {len(secret_word)} letters and you have {points} points to try."
+    rules=f"\t- Each Round One letter.\n\t- Type \"!\" to get help."
+    no_chance_message=f"You can not get help :c"
+    game_over_message=f"\t\t\tGAME OVER!"
+    
+    print(welcome_message)
+    print(description)
+    print(rules)
+
+    list_guessed_letters=[]
+    result=False
+    while points>0 and result!=True:
+      guessing_word=input("Type one letter: ")
+      available_characters=get_available_letters(list_guessed_letters)
+      
+      if with_help==True and guessing_word=="!":
+        if points>3:
+          points-=3
+          list_unguessed_letters=[]
+          for i in secret_word:
+            if(i not in list_guessed_letters):
+              list_unguessed_letters+=i
+          random_letter=random.choice(list_unguessed_letters)
+          guessing_word=random_letter
+        else:
+          print(no_chance_message)
+      if(guessing_word in allowed_characters):
+        if (guessing_word not in secret_word) or  (guessing_word in list_guessed_letters):
+          if(guessing_word in consonants):
+            points-=1
+          else:
+            points-=2
+        else:
+          list_guessed_letters+=guessing_word
+          available_characters=get_available_letters(list_guessed_letters)
+      else:
+        print(f"\t\tType just lowercase consonants or vowels!")
+      word_progressing=get_word_progress(secret_word,list_guessed_letters)
+
+      if(points<=0):
+        print(game_over_message)
+        break
+
+      checkWord= has_player_won(secret_word,list_guessed_letters)
+      if(checkWord):
+        result=True
+        print(f"\t Congratulations, You win!! The answer is \"{secret_word}\"")
+        break
+
+      
+      print(f"Hints: Characters Available are ({available_characters})")
+      print(word_progressing)
+      print(f"You have {points} points")
 
 
 # When you've completed your hangman function, scroll down to the bottom
@@ -149,7 +207,7 @@ if __name__ == "__main__":
     # To test your game, uncomment the following three lines.
 
     # secret_word = choose_word(wordlist)
-    # with_help = False
+    # with_help = True
     # hangman(secret_word, with_help)
 
     # After you complete with_help functionality, change with_help to True
@@ -162,5 +220,5 @@ if __name__ == "__main__":
     # It doesn't matter if the lines above are commented in or not
     # when you submit your pset. However, please run ps2_student_tester.py
     # one more time before submitting to make sure all the tests pass.
-    pass
+    pass    
 
