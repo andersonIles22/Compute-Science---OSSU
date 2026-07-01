@@ -1,2 +1,4 @@
 .venv/
 practice.py
+code/ps2_hangman/_pycache_/
+code/ps2_hangman/run_game_test_results.txt
