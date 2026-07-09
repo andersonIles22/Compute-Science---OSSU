@@ -214,13 +214,13 @@
 - [✓] FE 9.1 - write a function that receives two tuples as arguments, and return a tuple of 2 elements, the first is the length of one of the tuples, and the second is the sum of the pairwise products of tA and tB.
 
 ### Problem Set 1
-**Estado:** Incompleto
-**Problemas:** 1/2 completados
+**Estado:** Completado
+**Problemas:** 2/2 completados
 #### Parte A - Set helpers functions
 - Objetivo: Establecer funciones que permirá complementar el funcionamiento del juego hangman
 - Commit: `feat: ps3a - completed has_player_won, get_word_progress and get_available_letters functions`
 #### Parte B - Finish Hangman Game
 - Objetivo: Finalizar el juego de manera que al introducir entradas interactue de manera dinamica con las opciones elegidas por el usuario
-- Commit: (Pendiente)
+- Commit: `feat: ps3b - completed hangman game - 14/14 tests passed - add check_is_vowel, get_number_unique_letters and get_letter_not_guessed funcion - reduced nested conditionals and code duplication`
 
 ---
