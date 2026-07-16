@@ -222,4 +222,8 @@
 #### Parte B - Finish Hangman Game
 - Objetivo: Finalizar el juego de manera que al introducir entradas interactue de manera dinamica con las opciones elegidas por el usuario
 - Commit: `feat: ps3b - completed hangman game - 14/14 tests passed - add check_is_vowel, get_number_unique_letters and get_letter_not_guessed funcion - reduced nested conditionals and code duplication`
+
+### Recitation Exercises
+- [✓] Rec 9.1 - 4 de 4 ejercios resueltos (commit: `feat: rec9 - 4 exercises (function lambda, loops and working with tuples and lists)`)
+
 ---
