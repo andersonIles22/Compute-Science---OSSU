@@ -202,11 +202,11 @@
 
 ---
 ## Lecture 9 - Functions: Lambda, tuples and lists
-**Estado:**  Incompleta
-**Fecha:** -------
+**Estado:**  Completado
+**Fecha:** 21/07/2026
 
 ### Conceptos clave
-- functions
+- lambda functions
 - tuples
 - lists
 
@@ -226,4 +226,10 @@
 ### Recitation Exercises
 - [✓] Rec 9.1 - 4 de 4 ejercios resueltos (commit: `feat: rec9 - 4 exercises (function lambda, loops and working with tuples and lists)`)
 
+### Aprendizajes personales
+- Las funciones lambda son una alternativas con limitaciones a las funciones estandars. Con la diferencia de que estas son anonimas y contiene una sola a expresión a evaluar para retornar un solo valor.
+- Otro tipo de datos compuesto a parte del string, son las tuplas y listas. Ambas estructuras contiene elementos, se diferencia en que las tuplas son inmutables y la listas son mutables.
+- Las tuplas al ser inmutables, al establecerse no puede ser modificadas. Puede ser establecidas con parentesis  o simplemente separadas con una coma dentro de una variable. Tiene dos metodos .count(n) para contar las veces que n aparece en la tupla e .index(n) para saber el indice de la primera aparación de n.
+- Un caso util de las tuplas es cuando se desea introducir varios elementos como argumentos en una función, para que tome en cuenta muchos argumentos sin establecer una por una se usa un \* en el parametro. En vez de hacer fun(n,m,o,p) se utiliza \*, fun(\*args) donde al ejercutar la función fun(1,2,3,4) con el \* toma en cuenta a todos los valores introducidos. Pero se puede facilitar usando tuplas como argumento, en vez de hacer fun(1,2,3,4) que tiene cual parametros, se utiliza una tupla con los 4 parametros: fun((1,2,3,4)), así la función hace uso de los 4 parametros. 
+- Las listas al ser mutables posee metodos que permiten su manipulación como acceder y modificar los datos. Un ejemplo de metodo es .append() para agregar un elemento a la lista. 
 ---
