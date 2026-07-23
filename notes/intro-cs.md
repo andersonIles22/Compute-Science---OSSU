@@ -233,3 +233,26 @@
 - Un caso util de las tuplas es cuando se desea introducir varios elementos como argumentos en una función, para que tome en cuenta muchos argumentos sin establecer una por una se usa un \* en el parametro. En vez de hacer fun(n,m,o,p) se utiliza \*, fun(\*args) donde al ejercutar la función fun(1,2,3,4) con el \* toma en cuenta a todos los valores introducidos. Pero se puede facilitar usando tuplas como argumento, en vez de hacer fun(1,2,3,4) que tiene cual parametros, se utiliza una tupla con los 4 parametros: fun((1,2,3,4)), así la función hace uso de los 4 parametros. 
 - Las listas al ser mutables posee metodos que permiten su manipulación como acceder y modificar los datos. Un ejemplo de metodo es .append() para agregar un elemento a la lista. 
 ---
+
+---
+## Lecture 10 - List, Mutabilidad
+**Estado:**  Imcompleto
+**Fecha:** ---------
+
+### Conceptos clave
+- lists
+- loops
+- strings
+
+### Finger Exercises
+
+### Recitation Exercises
+
+### Aprendizajes personales
+- Las listas al ser mutables se pueden aplicar funciones y metodos.
+- La notación (.)  de object.operation() permite ejecutar los metodos y funciones, usando un parametro que en algunos casos es opcional sobre los objetos mutables, que en este caso una lista.
+- Los metodos y funciones mutan al objeto aplicado, por lo que el valor almacenado en memoria cambiará. Por lo que si se desea conservar el objeto original será necesario crear otra variable.
+- Los objetos mutables alterados por metodos (in-place) modifican el objeto original por lo cual estos no podran ser almacenados en memoria dado que solo almacenará None, por otro lado los objetos alterados por funciones serán necesarios ser almacenados en una variable debido a que se crea una nueva referencia en memoria.
+- En el caso de necesitar remover todos los elementos de una lista, esta deberá ser hecha mediante el metodo .clear(), asi la lista será vacía para todas sus referencias en caso de existir. O también es común usar del(keyword de python) y slice assignment del list[:]. No caer en el error de que al establecer sustitución el objeto original con una lista vacía basta. 
+- La palabra clave del, permite eliminar variable o referencia en memoria, en este caso al utilizar list[:], donde se puede establecer desde que indice y hasta que indice eliminar los elementos, o directamento con [:] seleccionar todos los elementos. 
+---
