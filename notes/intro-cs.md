@@ -241,13 +241,14 @@
 
 ### Conceptos clave
 - lists
+- mutability
 - loops
 - strings
 
 ### Finger Exercises
-
+- [✓] FE 10.1 - write a function that recieved an int and a list of function. Return True when all function of list return true, otherwise if one of the functions of list return false, Return false
 ### Recitation Exercises
-
+- [✓] Rec 10.1 - 3 de 3 ejercios resueltos (commit: `feat: rec10 - 3 exercises (application of mutability in lists)`)
 ### Aprendizajes personales
 - Las listas al ser mutables se pueden aplicar funciones y metodos.
 - La notación (.)  de object.operation() permite ejecutar los metodos y funciones, usando un parametro que en algunos casos es opcional sobre los objetos mutables, que en este caso una lista.
