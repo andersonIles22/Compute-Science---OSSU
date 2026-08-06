@@ -235,9 +235,9 @@
 ---
 
 ---
-## Lecture 10 - List, Mutabilidad
-**Estado:**  Imcompleto
-**Fecha:** ---------
+## Lecture 10 - List, Mutability
+**Estado:**  Completo
+**Fecha:** 04/08/2026
 
 ### Conceptos clave
 - lists
@@ -256,4 +256,27 @@
 - Los objetos mutables alterados por metodos (in-place) modifican el objeto original por lo cual estos no podran ser almacenados en memoria dado que solo almacenará None, por otro lado los objetos alterados por funciones serán necesarios ser almacenados en una variable debido a que se crea una nueva referencia en memoria.
 - En el caso de necesitar remover todos los elementos de una lista, esta deberá ser hecha mediante el metodo .clear(), asi la lista será vacía para todas sus referencias en caso de existir. O también es común usar del(keyword de python) y slice assignment del list[:]. No caer en el error de que al establecer sustitución el objeto original con una lista vacía basta. 
 - La palabra clave /"del/", permite eliminar variable o referencia en memoria, en este caso al utilizar list[:], donde se puede establecer desde que indice y hasta que indice eliminar los elementos, o directamento con [:] seleccionar todos los elementos. 
+---
+
+## Lecture 11 Aliasing, Cloning
+**Estado:**  Completado
+**Fecha:** 06/08/2026
+
+### Conceptos clave
+- lists
+- mutability
+- alias
+- cloning
+
+### Finger Exercises
+- [✓] FE 11.1 - Write a function that remove k elements of List, return the list sorted. If after remove elements and the lists is empty, the function shoul be return nothing. 
+### Aprendizajes personales
+- Las listas al ser mutables su manera de definir una copia cambian. Como se sabe el establecer una variable permite establecer un referencia entre el nombre y lo que apunta esto la memoria. Entonces al establecer una variable que apunta una lista, y luego establecer otra variable con el nombre de la variable anterior, estos dos apuntaran al mismo espacio en memoria. Permitiendo que dos variables apunten a la misma lista, y recibiendo el mismo cambio a lo que apuntan. 
+- Para una buena clonación o copia, se debe usar metodos como el .copy() o utilizar la libreria copy, o usar [:] donde permitirá realizar una copia de todos los elementos pero sus punteros a memoria seran independientes.
+- Para remover tambien existe varias tecnicas, como: .remove(n) que remueve desde izquierda a derecha la primera ocurrencia de n, del(obj[i]) permite remover por posición del indice o .pop() que es una función que remueve el ultimo item, si se pasa un indice este será el punto de inicio de posición de izquierda a derecha. 
+- Se debe tener en cuenta que los tipos de datos que son mutables pueden afectar al codigo, cuando esta usando y aplicando logica condicionada que pueden afectar el orden y los elementos, donde si este cambia por mutación no tendría el mismo orden o elementos que perjudican cuando se ha establecido un orden especefico a seguir en el codigo. Para solucionar esto es necesario realizar una copia que no afecte al original.
+- Como se sabe el establecer una variable como igual a otra variable que apunta a algo en memoria, solo se esta estableciendo un alias, dado que ahora las dos variables apuntan al mismo punto. Esto sucede también cuando se establece argumentos (fn1,fn2,fn3) que serán pasados a una función, y la función tiene nombres diferentes a sus parametros (param1,param2,param3), en este caso los nombres de los parametros son alias, que apuntan al mismo espacio en memoria que los argumentos pasados.
+- Se debe tener en cuenta que realizar una copia correctamente no asegura que también realicen un copia independiente de los elementos anidadas, por ejemplo una lista de listas. Al copiar solo se esta copiando la estructura en la primera capa de la lista, por lo que los valores de las listas internas apuntan al mismo espacio en memoria a pesar de ser dos listas independientes en la primera capa.
+- Las listas son eficientes debido a que por cada modificación no hay necesadad de crear otra copia, pero pueden producir congruencias si no se tiene en cuenta las mutaciones.
+- Las tuplas no pueden ser mutables y son seguras para cuando se manipula datos importantes, además son rapidas en el aspecto de busqueda.
 ---
