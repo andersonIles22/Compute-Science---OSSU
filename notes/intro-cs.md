@@ -280,3 +280,25 @@
 - Las listas son eficientes debido a que por cada modificación no hay necesadad de crear otra copia, pero pueden producir congruencias si no se tiene en cuenta las mutaciones.
 - Las tuplas no pueden ser mutables y son seguras para cuando se manipula datos importantes, además son rapidas en el aspecto de busqueda.
 ---
+
+## Lecture 12 List comprehension, Funtions as Objects, Testing and Debugging
+**Estado:**  Imcompleto
+**Fecha:** --------
+
+### Conceptos clave
+- lists
+- Functions
+- testing
+- debugging
+
+### Finger Exercises
+- [✓] FE 12.1 - write a function that take like input a list of unique and positive integers, and the function return the number of elements that are exact squares.    
+### Aprendizajes personales
+- List comprehension permite crear sintaxis simples de leer, permitiendo modificar a cada elemento de la lista sin necesidad de utilizar loops. Para esto se debe establecer entre corchetes: [expression for item in iterable if condition]. Esto devolvera la lista modificada.
+- Las funciones pueden tener parametros con valores predefinidos, siempre en cuando se tenga en cuenta que debe estar al final de los parametros de la función si tiene mas de un parametro. No al inicio, no en medio, al final siempre, para evitar errores. 
+- Cada función tiene su entorno, entonces establecer que una función retorne otra función solo estamos retornando codigo y un entorno que puede utilizar parametros y variables de la función principal o de todos los entornos con scope mas alto.
+- El retornar funciones de funciones permite tener un buen diseño de software, manteniendo la descomposición y la abstracción.
+- Testing/Validación no es mas que comparar que las salidas o resultados de entradas especeficas sean iguales a las esperadas con dichas entradas.
+- Debugging es averiguar y resolver el error que presenta cuando los test fallan. 
+- Para facilitar el testing-debugging se debe tener el codigo en modulos independientes que facilita la localización de errores de forma aislada. 
+---
