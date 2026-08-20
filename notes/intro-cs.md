@@ -292,7 +292,16 @@
 - debugging
 
 ### Finger Exercises
-- [✓] FE 12.1 - write a function that take like input a list of unique and positive integers, and the function return the number of elements that are exact squares.    
+- [✓] FE 12.1 - write a function that take like input a list of unique and positive integers, and the function return the number of elements that are exact squares. 
+### Problem Set 3
+**Estado:** Incompleto 
+**Problemas:** 4/5 completados
+#### Parte 1 - Get frequcencies and Calculate similarity
+- Objetivo: Completar funciones que seran utilizados para encontrar TF-IDF
+- Commit: `feat:ps4a - completed get_frequencies, get_letter_frequencies and calculate_similarity_score functions`
+#### Parte 2 - Get most frequent words
+- Objetivo: Obtener la palabra con la frecuencia mas alta, despues de unir los elementos de dos diccionarios, y en caso de existir mas de dos palabras con la misma frecuencia ordenarlas en orden alfabetico
+- Commit: `feat:ps4a - completed get_most_frequent_words function`
 ### Aprendizajes personales
 - List comprehension permite crear sintaxis simples de leer, permitiendo modificar a cada elemento de la lista sin necesidad de utilizar loops. Para esto se debe establecer entre corchetes: [expression for item in iterable if condition]. Esto devolvera la lista modificada.
 - Las funciones pueden tener parametros con valores predefinidos, siempre en cuando se tenga en cuenta que debe estar al final de los parametros de la función si tiene mas de un parametro. No al inicio, no en medio, al final siempre, para evitar errores. 
