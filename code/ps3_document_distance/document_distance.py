@@ -142,12 +142,21 @@ def get_most_frequent_words(freq_dict1, freq_dict2):
     If multiple words are tied (i.e. share the same highest frequency),
     return an alphabetically ordered list of all these words.
     """
-    new_list=[]
+    dict_one=dict(freq_dict1)
+    dict_two=dict(freq_dict2)
+    new_dictionary={}
 
-    for i in freq_dict1:
-        if i in freq_dict2:
-            
+    for i in dict_one:
+        new_dictionary[i]=new_dictionary.get(i,0)+dict_one[i]
 
+    for i in dict_two:
+        new_dictionary[i]=new_dictionary.get(i,0)+dict_two[i]
+
+
+    max_frecuency=max(list(new_dictionary.values()))
+    only_high_frecuency=[e for e in new_dictionary if new_dictionary[e]==max_frecuency]
+
+    return sorted(only_high_frecuency)
 
 
 
@@ -241,10 +250,10 @@ if __name__ == "__main__":
     print(word_similarity3)       # should print 0.0
     print(word_similarity4)       # should print 0.4
 
-    ## Tests Problem 4: Most Frequent Word(s)
-    # freq_dict1, freq_dict2 = {"hello": 5, "world": 1}, {"hello": 1, "world": 5}
-    # most_frequent = get_most_frequent_words(freq_dict1, freq_dict2)
-    # print(most_frequent)      # should print ["hello", "world"]
+    # Tests Problem 4: Most Frequent Word(s)
+    freq_dict1, freq_dict2 = {"hello": 5, "world": 1,"saram":7,"cola":4}, {"hello": 1, "world": 5,"agua":6,'saba':7}
+    most_frequent = get_most_frequent_words(freq_dict1, freq_dict2)
+    print(most_frequent)      # should print ["hello", "world"]
 
     ## Tests Problem 5: Find TF-IDF
     # tf_text_file = 'tests/student_tests/hello_world.txt'
