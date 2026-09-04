@@ -172,7 +172,11 @@ def get_tf(file_path):
         in the document) / (total number of words in the document)
     * Think about how we can use get_frequencies from earlier
     """
-    pass
+    all_content=load_file(file_path)
+    list_content=text_to_list(all_content)
+    result=get_frequencies(list_content)
+    return result
+
 
 def get_idf(file_paths):
     """
@@ -255,12 +259,12 @@ if __name__ == "__main__":
     most_frequent = get_most_frequent_words(freq_dict1, freq_dict2)
     print(most_frequent)      # should print ["hello", "world"]
 
-    ## Tests Problem 5: Find TF-IDF
-    # tf_text_file = 'tests/student_tests/hello_world.txt'
-    # idf_text_files = ['tests/student_tests/hello_world.txt', 'tests/student_tests/hello_friends.txt']
-    # tf = get_tf(tf_text_file)
+    # Tests Problem 5: Find TF-IDF
+    tf_text_file = 'tests/student_tests/hello_world.txt'
+    idf_text_files = ['tests/student_tests/hello_world.txt', 'tests/student_tests/hello_friends.txt']
+    tf = get_tf(tf_text_file)
     # idf = get_idf(idf_text_files)
     # tf_idf = get_tfidf(tf_text_file, idf_text_files)
-    # print(tf)     # should print {'hello': 0.6666666666666666, 'world': 0.3333333333333333}
+    print(tf)     # should print {'hello': 0.6666666666666666, 'world': 0.3333333333333333}
     # print(idf)    # should print {'hello': 0.0, 'world': 0.3010299956639812, 'friends': 0.3010299956639812}
     # print(tf_idf) # should print [('hello', 0.0), ('world', 0.10034333188799373)]
